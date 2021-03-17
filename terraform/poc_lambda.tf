@@ -105,7 +105,7 @@ resource "aws_lambda_function" "poc_update_animal_lambda" {
 
 resource "aws_lambda_function" "poc_delete_animal_lambda" {
   filename      =  "../lambdas/build/animal_delete/main.zip"
-  function_name = "poc_delete_animal_lambda"
+  function_name = "poc_eliminar_animal_lambda"
   role          = aws_iam_role.poc_lambda_role.arn
   handler       = "main"
   source_code_hash = filebase64sha256("../lambdas/build/animal_delete/main.zip")

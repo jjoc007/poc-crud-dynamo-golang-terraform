@@ -30,7 +30,10 @@ func LambdaHandler(cxt context.Context, event events.APIGatewayProxyRequest) (ev
 
 	return events.APIGatewayProxyResponse{
 		StatusCode:        200,
+		Headers:           nil,
+		MultiValueHeaders: nil,
 		Body:              string(outAnimal),
+		IsBase64Encoded:   false,
 	}, nil
 }
 
